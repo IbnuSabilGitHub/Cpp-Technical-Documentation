@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth focus:scroll-auto">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Technical Documentation</title>
+    <link rel="stylesheet" href="global.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark-dimmed.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+
+</head>
+
+<body cz-shortcut-listen="true" class="bg-gray-200 dark:bg-gray-950">
+    <button id="btn-navbar" data-drawer-target="navbar" data-drawer-toggle="navbar" aria-controls="navbar" type="button"
+        class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+        <span class="sr-only">Open sidebar</span>
+        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path clip-rule="evenodd" fill-rule="evenodd"
+                d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
+            </path>
+        </svg>
+    </button>
+
+    <nav id="navbar"
+        class="fixed top-0 left-0 z-40 sm:w-72 w-auto h-screen transition-transform -translate-x-full sm:translate-x-0"
+        aria-label="Sidebar">
+
+        <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-900">
+            <div id="header"
+                class="inline-flex font-bold text-gray-900 py-4 dark:text-white sm:text-lg text-sm border-b-[1px] border-gray-500 border-opacity-50">
+                <img class="w-6" src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg"
+                    alt="cpp icon">
+                <h1 class="ms-3">Technical Documentation</h1>
+            </div id="header">
+
+            <ul class="space-y-2 font-medium my-3 sm:text-sm text-xs">
+                <li>
+                    <a href="#Introduction"
+                        class="nav-link flex items-center p-2 text-slate-700 dark:text-slate-400 rounded-lg hover:text-slate-200 hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <span class="flex-1 whitespace-nowrap">Introduction</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#Installation"
+                        class="nav-link flex items-center p-2 text-slate-700 dark:text-slate-400 rounded-lg hover:text-slate-200 hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <span class="flex-1 whitespace-nowrap">Installation</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#Syntax_Overview"
+                        class="nav-link flex items-center p-2 text-slate-700 dark:text-slate-400 rounded-lg hover:text-slate-200 hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <span class="flex-1 whitespace-nowrap">Syntax Overview</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#Functions"
+                        class="nav-link flex items-center p-2 text-slate-700 dark:text-slate-400 rounded-lg hover:text-slate-200 hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <span class="flex-1 whitespace-nowrap">Functions</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#Object_Oriented_Programming"
+                        class="nav-link flex items-center p-2 text-slate-700 dark:text-slate-400 rounded-lg hover:text-slate-200 hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <span class="flex-1 whitespace-nowrap">Object-Oriented Programming (OOP)</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#Memory_Management"
+                        class="nav-link flex items-center p-2 text-slate-700 dark:text-slate-400 rounded-lg hover:text-slate-200 hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <span class="flex-1 whitespace-nowrap">Memory Management</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#Standard_Template_Library"
+                        class="nav-link flex items-center p-2 text-slate-700 dark:text-slate-400 rounded-lg hover:text-slate-200 hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <span class="flex-1 whitespace-nowrap">Best Practices</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#Error_Handling"
+                        class="nav-link flex items-center p-2 text-slate-700 dark:text-slate-400 rounded-lg hover:text-slate-200 hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <span class="flex-1 whitespace-nowrap">Error Handling</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#Best_Practices"
+                        class="nav-link flex items-center p-2 text-slate-700 dark:text-slate-400 rounded-lg hover:text-slate-200 hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <span class="flex-1 whitespace-nowrap">Best Practices</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#Conclusion"
+                        class="nav-link flex items-center p-2 text-slate-700 dark:text-slate-400 rounded-lg hover:text-slate-200 hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <span class="flex-1 whitespace-nowrap">Conclusion</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main id="main-doc" class="sm:px-24 px-6 py-6 ml-0 sm:ml-72 text-slate-900 dark:text-slate-200">
+        <header class="font-bold sm:text-4xl text-xl border-b-[1px] border-gray-500 border-opacity-50 pb-6 mb-6">
+            <h1>C++ Technical Documentation</h1>
+        </header>
+
+        <!-- Introduction -->
+        <section class="main-section mt-8" id="Introduction">
+            <header class="sm:text-3xl text-lg font-semibold text-slate-900 dark:text-slate-200">Introduction</header>
+            <article class="text-slate-700 dark:text-slate-400 sm:text-lg text-sm mt-2">
+                <p>
+                    <span class=" dark:text-white text-gray-900">C++ </span>is a statically typed, compiled, general-purpose programming language designed as an extension 
+                    of the C language by <a class="text-blue-400 hover:underline decoration-1"
+                    href="https://id.wikipedia.org/wiki/Bjarne_Stroustrup" target="_blank">Bjarne Stroustrup</a> in 1979. It supports multiple programming paradigms, such 
+                    as procedural, object-oriented, and generic programming, making it highly versatile for various 
+                    applications like system/software development, game development, embedded systems, and real-time 
+                    simulations.
+                </p>
+                <p class="mt-3">
+                    C++ provides low-level memory manipulation features while also supporting high-level abstraction 
+                    through object-oriented techniques. It is widely used for performance-critical applications where 
+                    efficiency and speed are of utmost importance.
+                </p>
+            </article>
+        </section>
+
+        <!-- Installation -->
+        <section class="main-section mt-8" id="Installation">
+            <header class="sm:text-3xl text-lg font-semibold text-slate-900 dark:text-slate-200">Installation</header>
+            <article class="text-slate-700 dark:text-slate-400 sm:text-lg text-sm mt-2">
+                <div class="step mt-4">
+                    <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">1. Windows</h2>
+                    <ol class="list-decimal pl-5 space-y-2">
+                        <li>Download and Install a Compiler:
+                            <div class="ml-3 mt-1">
+                                <p>You can install the <a class="text-blue-400 hover:underline decoration-1"
+                                    href="https://code.visualstudio.com/docs/cpp/config-mingw" target="_blank">MinGW</a> compiler by downloading it from the official website or use Visual Studio, which comes with a built-in C++ compiler.
+                                </p>
+                        </li>
+                        <li>Set Up Environment Variables (MinGW):
+                            <div class="ml-3 mt-1">
+                                <p>Add the MinGW<span class="bg-zinc-400/30 rounded-sm"> bin </span>directory (e.g.,<span class="bg-zinc-400/30 rounded-sm"> C:\MinGW\bin </span>)
+                                    to the system's<span class="bg-zinc-400/30 rounded-sm"> PATH </span>environment variable.
+                                </p>
+                            </div>
+                        </li>
+                        
+                        <li>Install an IDE:
+                            <div class="ml-3 mt-1">
+                                <p>Install <a class="text-blue-400 hover:underline decoration-1"
+                                    href="https://code.visualstudio.com/download" target="_blank">Visual Studio</a> or <a class="text-blue-400 hover:underline decoration-1"
+                                    href="https://www.codeblocks.org/downloads/" target="_blank">Code::Blocks.</a> as an integrated development environment (IDE) for editing, compiling, and debugging code.
+                                </p>
+                            </div>
+                        </li>
+                        <li>Compiling and Running:
+                            <div class="ml-3 mt-1">
+                                <p>Open the terminal or command prompt and use the following command to compile a C++ program: </p>
+                                <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
+                                    <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
+                                        <span>bash</span>
+                                        <div class="flex items-center">
+                                            <button onclick="copyCode(this)" class="copyBtn flex items-center">
+                                                <i class="fa-solid fa-lg fa-copy"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="overflow-y-auto" dir="ltr"><code class="language-bash sm:text-sm text-xs p-0 text-slate-200">g++ filename.cpp -o output</code></div>
+                                </div></pre>
+                                <p>Run the program: </p>
+                                <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
+                                    <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
+                                        <span>bash</span>
+                                        <div class="flex items-center">
+                                            <button onclick="copyCode(this)" class="copyBtn flex items-center">
+                                                <i class="fa-solid fa-lg fa-copy"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="overflow-y-auto" dir="ltr"><code class="language-bash sm:text-sm text-xs p-0 text-slate-200">./output</code></div>
+                                </div></pre>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+                <div class="step mt-4">
+                    <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">2. Linux</h2>
+                    <ol class="list-decimal pl-5 space-y-2">
+                        <li>Open a terminal.</li>
+                        <li>Install GCC using:
+                            <div class="ml-3 mt-1">
+                                <p>Most Linux distributions come with the GNU Compiler Collection (GCC). If not, install it using your package manager:</p>
+                                <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
+                                    <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
+                                        <span>bash</span>
+                                        <div class="flex items-center">
+                                            <button onclick="copyCode(this)" class="copyBtn flex items-center">
+                                                <i class="fa-solid fa-lg fa-copy"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="overflow-y-auto" dir="ltr"><code class="language-bash sm:text-sm text-xs p-0 text-slate-200">sudo apt-get install g++</code></div>
+                                </div></pre>
+                            </div>
+                        </li>
+                        <li>Verify installation:
+                            <div class="ml-3 mt-1">
+                                <p>Check if the compiler is installed correctly by running:</p>
+                                <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
+                                    <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
+                                        <span>bash</span>
+                                        <div class="flex items-center">
+                                            <button onclick="copyCode(this)" class="copyBtn flex items-center">
+                                                    <i class="fa-solid fa-lg fa-copy"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="overflow-y-auto" dir="ltr"><code class="language-bash sm:text-sm text-xs p-0 text-slate-200">g++ --version</code></div>
+                                </div></pre>
+                            </div>
+                        </li>
+                        <li>Compiling and Running:
+                            <div class="ml-3 mt-1">
+                                <p>Compile the program using: </p>
+                                <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
+                                    <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
+                                        <span>bash</span>
+                                        <div class="flex items-center">
+                                            <button onclick="copyCode(this)" class="copyBtn flex items-center">
+                                                <i class="fa-solid fa-lg fa-copy"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="overflow-y-auto" dir="ltr"><code class="language-bash sm:text-sm text-xs p-0 text-slate-200">g++ filename.cpp -o output</code></div>
+                                </div></pre>
+                                <p>Run the program: </p>
+                                <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
+                                    <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
+                                        <span>bash</span>
+                                        <div class="flex items-center">
+                                            <button onclick="copyCode(this)" class="copyBtn flex items-center">
+                                                <i class="fa-solid fa-lg fa-copy"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="overflow-y-auto" dir="ltr"><code class="language-bash sm:text-sm text-xs p-0 text-slate-200">./output</code></div>
+                                </div></pre>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+                <div class="step mt-4">
+                    <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">3. macOS</h2>
+                    <ol class="list-decimal pl-5 space-y-2">
+                        <li>Install <a class="text-blue-400 hover:underline decoration-1"
+                                href="https://apps.apple.com/us/app/xcode/id497799835?mt=12" target="_blank">Xcode</a>
+                            from the App Store.</li>
+                        <li>Install Xcode Command Line Tools:
+                            <div class="ml-3 mt-1">
+                                <p>Run the following command in the terminal to install the Xcode command line tools:</p>
+                                <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
+                                    <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
+                                        <span>bash</span>
+                                        <div class="flex items-center">
+                                            <button onclick="copyCode(this)" class="copyBtn flex items-center">
+                                                <i class="fa-solid fa-lg fa-copy"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="overflow-y-auto" dir="ltr"><code class="language-bash sm:text-sm text-xs p-0 text-slate-200">xcode-select --install</code></div>
+                                </div></pre>
+                            </div> 
+                        </li>
+                        <li>Compiling and Running:
+                            <div class="ml-3 mt-1">
+                                <p>Compile the program using: </p>
+                                <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
+                                    <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
+                                        <span>bash</span>
+                                        <div class="flex items-center">
+                                            <button onclick="copyCode(this)" class="copyBtn flex items-center">
+                                                <i class="fa-solid fa-lg fa-copy"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="overflow-y-auto" dir="ltr"><code class="language-bash sm:text-sm text-xs p-0 text-slate-200">g++ filename.cpp -o output</code></div>
+                                </div></pre>
+                                <p>Run the program: </p>
+                                <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
+                                    <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
+                                        <span>bash</span>
+                                        <div class="flex items-center">
+                                            <button onclick="copyCode(this)" class="copyBtn flex items-center">
+                                                <i class="fa-solid fa-lg fa-copy"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="overflow-y-auto" dir="ltr"><code class="language-bash sm:text-sm text-xs p-0 text-slate-200">./output</code></div>
+                                </div></pre>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </article>
+        </section>
+
+        <!-- Syntax Overview -->
+        <section class="main-section mt-8" id="Syntax_Overview">
+            <header class="sm:text-3xl text-lg font-semibold text-slate-900 dark:text-slate-200">Syntax Overview
+            </header>
+            <article class="text-slate-700 dark:text-slate-400 sm:text-lg text-sm mt-2">
+                <div class="step mt-4">
+                    <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">1. Basic Structure</h2>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
+                            <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
+                                <span>cpp</span>
+                                <div class="flex items-center">
+                                    <button onclick="copyCode(this)" class="copyBtn flex items-center">
+                                        <i class="fa-solid fa-lg fa-copy"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="overflow-y-auto" dir="ltr"><code class="language-cpp sm:text-sm text-xs p-0 text-slate-200">#include &lt;iostream&gt;
+
+int main() {
+    std::cout &lt;&lt; &quot;Hello, World!&quot; &lt;&lt; std::endl;
+    return 0;
+}
+</code></div>
+                        </div></pre>
+                        <li><strong>#include &lt;iostream&gt;</strong> This preprocessor directive includes the standard
+                            input/output stream library.</li>
+                        <li><strong>int main():</strong> This is the main function where program execution begins.</li>
+                        <li><strong>std::cout:</strong> This is used to print output to the console.</li>
+                        <li><strong>std::endl:</strong> Inserts a newline and flushes the output buffer.</li>
+                        <li><strong>return 0:</strong> Indicates successful program termination.</li>
+                    </ul>
+                </div>
+                <div class="step mt-4">
+                    <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">2. Data Types</h2>
+                    <ul class="list-decimal pl-5 space-y-2">
+                        <li>
+                            Primitive Data Types:
+                            <div class="ml-3 mt-1 space-y-1">
+                                <p><strong>int:</strong> Integer type (e.g.,<span class="bg-zinc-400/30 rounded-sm"> int x = 10; </span>).</p>
+                                <p><strong>float, double:</strong> Floating-point types (e.g.,<span
+                                    class="bg-zinc-400/30 rounded-sm"> float pi = 3.14f; </span>).</p>
+                                <p><strong>char:</strong> Character type (e.g.,<span class="bg-zinc-400/30 rounded-sm"> char
+                                    letter = 'A'; </span>).</p>
+                                <p><strong>bool:</strong> Boolean type (e.g.,<span class="bg-zinc-400/30 rounded-sm"> bool
+                                    isTrue = true; </span>).</p>
+                                <p><strong>string:</strong> For handling strings, typically with the standard library
+                                    (e.g.,<span class="bg-zinc-400/30 rounded-sm"> std::string name = "C++"; </span>).</p>
+                            </div>
+                        </li>
+                        <li>
+                            Derived Data Types:
+                            <div class="ml-3 mt-1">
+                            <p><strong>Array:</strong> Collection of elements of the same type (e.g., <span class="bg-zinc-400/30 rounded-sm"> int arr[5]; </span>).</p>
+                            <p><strong>Pointer:</strong> Stores memory address of another variable(e.g., <span
+                                    class="bg-zinc-400/30 rounded-sm"> int* ptr = &amp;a; </span>).</p>
+                            </div>
+                        </li>
+                        <li>
+                            User-Defined Data Type:
+                            <p><strong>struct, class, enum union:</strong> Used to define custom data types.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="step mt-4">
+                    <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">3. Variables and Constants</h2>
+                    <div class="ml-3 mt-1">
+                        Variables are used to store data in memory, while constants are immutable values that cannot change during program execution.
+                        <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
+                            <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
+                                <span>cpp</span>
+                                <div class="flex items-center">
+                                    <button onclick="copyCode(this)" class="copyBtn flex items-center">
+                                        <i class="fa-solid fa-lg fa-copy"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="overflow-y-auto" dir="ltr"><code class="language-cpp sm:text-sm text-xs p-0 text-slate-200">int age = 25;           // Variable
+const double PI = 3.14; // Constant
+</code></div>
+                        </div></pre>
+                    </div>
+                </div>
+                <div class="step mt-4">
+                    <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">4. Operators</h2>
+                    <div class="ml-3 mt-1">
+                        <p>Operators are used to perform operations on variables and values. C++ supports several types of operators:</p>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li><strong>Arithmetic Operators: </strong>
+                                <span class="bg-zinc-400/30 rounded-sm px-1">+</span>,
+                                <span class="bg-zinc-400/30 rounded-sm px-1">-</span>,
+                                <span class="bg-zinc-400/30 rounded-sm px-1">*</span>,
+                                <span class="bg-zinc-400/30 rounded-sm px-1">/</span>,
+                                <span class="bg-zinc-400/30 rounded-sm px-1">%</span>,
+                            </li>
+                            <li><strong>Relational Operators: </strong>
+                                <span class="bg-zinc-400/30 rounded-sm px-1">==</span>,
+                                <span class="bg-zinc-400/30 rounded-sm px-1">!=</span>,
+                                <span class="bg-zinc-400/30 rounded-sm px-1">&gt;</span>,
+                                <span class="bg-zinc-400/30 rounded-sm px-1">&lt;</span>,
+                                <span class="bg-zinc-400/30 rounded-sm px-1">&gt;=</span>,
+                                <span class="bg-zinc-400/30 rounded-sm px-1">&lt;=</span>,
+                            </li>
+                            <li><strong>Logical Operators: </strong>
+                                <span class="bg-zinc-400/30 rounded-sm px-1">&&</span>,
+                                <span class="bg-zinc-400/30 rounded-sm px-1">||</span>,
+                                <span class="bg-zinc-400/30 rounded-sm px-1">!</span>,
+                            </li>
+                            <li><strong>Assignment Operators: </strong>
+                                <span class="bg-zinc-400/30 rounded-sm px-1">=</span>,
+                                <span class="bg-zinc-400/30 rounded-sm px-1">+=</span>,
+                                <span class="bg-zinc-400/30 rounded-sm px-1">-=</span>,
+                                <span class="bg-zinc-400/30 rounded-sm px-1">*=</span>,
+                                <span class="bg-zinc-400/30 rounded-sm px-1">/=</span>,
+                                <span class="bg-zinc-400/30 rounded-sm px-1">%=</span>,
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="step mt-4">
+                    <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">5. Control Flow Statements</h2>
+                    <ol class="list-decimal pl-5 space-y-2">
+                        <li>Conditional Statements
+                            <p class="mt-1">Conditional statements are used to perform different actions based on conditions.</p>
+                            <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
+                                <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
+                                    <span>cpp</span>
+                                    <div class="flex items-center">
+                                        <button onclick="copyCode(this)" class="copyBtn flex items-center">
+                                            <i class="fa-solid fa-lg fa-copy"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="overflow-y-auto" dir="ltr"><code class="language-cpp sm:text-sm text-xs" >if (x &gt; y) {
+    std::cout &lt;&lt; &quot;x is greater than y&quot; &lt;&lt; std::endl;
+} else if (x &lt; y) {
+    std::cout &lt;&lt; &quot;x is less than y&quot; &lt;&lt; std::endl;
+} else {
+    std::cout &lt;&lt; &quot;x is equal to y&quot; &lt;&lt; std::endl;
+}
+</code></div></div></pre>
+                        </li>
+                        <li>Looping Constructs
+                            <ul class="list-disc pl-5 space-y-2 sm:text-sm text-xs">
+                                <p class="mt-1">Loops allow the execution of a statement of group of statements multiple times</p>
+                                <li><strong>For Loop:</strong>
+                                    <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
+                                        <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
+                                            <span>cpp</span>
+                                                <div class="flex items-center">
+                                            <button onclick="copyCode(this)" class="copyBtn flex items-center">
+                                                <i class="fa-solid fa-lg fa-copy"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="overflow-y-auto" dir="ltr"><code class="language-cpp sm:text-sm text-xs p-0 text-slate-200">for (int i = 0; i &lt; 10; i++) {
+    std::cout &lt;&lt; i &lt;&lt; std::endl;
+}
+</code></div></div></pre>
+                                </li>
+                                <li><strong>While Loop:</strong>
+                                    <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
+                                        <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
+                                            <span>cpp</span>
+                                                <div class="flex items-center">
+                                            <button onclick="copyCode(this)" class="copyBtn flex items-center">
+                                                <i class="fa-solid fa-lg fa-copy"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="overflow-y-auto" dir="ltr"><code class="language-cpp sm:text-sm text-xs p-0 text-slate-200">int i = 0;
+while (i &lt; 10) {
+    std::cout &lt;&lt; i &lt;&lt; std::endl;
+    i++;
+}
+</code></div></div></pre>
+                                </li>
+                                <li><strong>Do-While Loop:</strong> Executes at least once before checking the condition.
+                                    <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
+                                        <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
+                                            <span>cpp</span>
+                                                <div class="flex items-center">
+                                            <button onclick="copyCode(this)" class="copyBtn flex items-center">
+                                                <i class="fa-solid fa-lg fa-copy"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="overflow-y-auto" dir="ltr"><code class="language-cpp sm:text-sm text-xs p-0 text-slate-200">int i = 0;
+do {
+    std::cout &lt;&lt; i &lt;&lt; std::endl;
+    i++;
+} while (i &lt; 5);
+</code></div></div></pre>
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </article>
+        </section>
+
+        <!-- Functions -->
+        <section class="main-section mt-8" id="Functions">
+            <header class="sm:text-3xl text-lg font-semibold text-slate-900 dark:text-slate-200">Functions</header>
+            <article class="text-slate-700 dark:text-slate-400 sm:text-lg text-sm mt-2">
+                <div class="step mt-4">
+                    <div class="step mt-4">
+                        <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">1. Function Declaration</h2>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
+                                <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
+                                    <span>cpp</span>
+                                    <div class="flex items-center">
+                                        <button onclick="copyCode(this)" class="copyBtn flex items-center">
+                                            <i class="fa-solid fa-lg fa-copy"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="overflow-y-auto" dir="ltr"><code class="language-cpp sm:text-sm text-xs p-0 text-slate-200">int add(int a, int b) {
+    return a + b;
+}</code></div></div></pre>
+                            <li><strong>Return Type:</strong> The type of value the function returns (e.g.,<span
+                                    class="bg-zinc-400/30 rounded-sm"> int </span>).</li>
+                            <li><strong>Function Name:</strong> The identifier used to call the function (e.g.,<span
+                                    class="bg-zinc-400/30 rounded-sm"> add </span>).</li>
+                            <li><strong>Parameters:</strong> Variables passed to the function (e.g.,<span
+                                    class="bg-zinc-400/30 rounded-sm"> int a, int b </span>).</li>
+                            <li><strong>Return Statement: </strong> Specifies the value to return to the caller.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="step mt-4">
+                    <div class="step mt-4">
+                        <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">2. Function Overloading</h2>
+                        <ul class="pl-5 space-y-2">
+                            <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
+                                <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
+                                    <span>cpp</span>
+                                    <div class="flex items-center">
+                                        <button onclick="copyCode(this)" class="copyBtn flex items-center">
+                                            <i class="fa-solid fa-lg fa-copy"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="overflow-y-auto" dir="ltr"><code class="language-cpp sm:text-sm text-xs p-0 text-slate-200">int add(int a, int b) {
+    return a + b;
+}
+
+double add(double a, double b) {
+    return a + b;
+}
+</code></div></div></pre>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- object-oriented programming -->
+        <section class="main-section mt-8" id="Object_Oriented_Programming">
+            <header class="sm:text-3xl text-lg font-semibold text-slate-900 dark:text-slate-200">Object Oriented
+                Programming</header>
+            <article class="text-slate-700 dark:text-slate-400 sm:text-lg text-sm mt-2">
+                <div class="step mt-4">
+                    <div class="step mt-4">
+                        <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">1. Classes and Objects</h2>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
+                                <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
+                                    <span>cpp</span>
+                                    <div class="flex items-center">
+                                        <button onclick="copyCode(this)" class="copyBtn flex items-center">
+                                            <i class="fa-solid fa-lg fa-copy"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="overflow-y-auto" dir="ltr"><code class="language-cpp sm:text-sm text-xs p-0 text-slate-200">class Car {
+public:
+    std::string brand;
+    int year;
+
+    void honk() {
+        std::cout &lt;&lt; &quot;Honk! Honk!&quot; &lt;&lt; std::endl;
+    }
+};
+
+int main() {
+    Car myCar;
+    myCar.brand = &quot;Toyota&quot;;
+    myCar.year = 2020;
+    myCar.honk();
+}</code></div></div></pre>
+                            <li><strong>Class:</strong>blueprint for objects, defining properties (e.g.,<span
+                                    class="bg-zinc-400/30 rounded-sm"> brand </span>,
+                                <span class="bg-zinc-400/30 rounded-sm"> year </span>) and methods(e.g., <span
+                                    class="bg-zinc-400/30 rounded-sm"> hook() </span>).
+                            </li>
+                            <li><strong>Object:</strong> An instance of a class (e.g.,<span
+                                    class="bg-zinc-400/30 rounded-sm"> mycar </span>).</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="step mt-4">
+                    <div class="step mt-4">
+                        <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">2. Inheritance</h2>
+                        <ul class="pl-5 space-y-2">
+                            <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
+                                <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
+                                    <span>cpp</span>
+                                    <div class="flex items-center">
+                                        <button onclick="copyCode(this)" class="copyBtn flex items-center">
+                                                <i class="fa-solid fa-lg fa-copy"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="overflow-y-auto" dir="ltr"><code class="language-cpp sm:text-sm text-xs p-0 text-slate-200">class Vehicle {
+public:
+    int wheels;
+};
+
+class Car : public Vehicle {
+public:
+    std::string brand;
+};
+</code></div></div></pre>
+                            <li><strong>Base Class:</strong> The class being inherited from (<span
+                                    class="bg-zinc-400/30 rounded-sm"> Vehicle </span>).</li>
+                            <li><strong>Derived Class:</strong> The class that inherits (<span
+                                    class="bg-zinc-400/30 rounded-sm"> mycar </span>).</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="step mt-4">
+                    <div class="step mt-4">
+                        <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">3. Polymorphism</h2>
+                        <ul class="pl-5 space-y-2">
+                            <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
+                                <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
+                                    <span>cpp</span>
+                                    <div class="flex items-center">
+                                        <button onclick="copyCode(this)" class="copyBtn flex items-center">
+                                                <i class="fa-solid fa-lg fa-copy"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="overflow-y-auto" dir="ltr"><code class="language-cpp sm:text-sm text-xs p-0 text-slate-200">class Animal {
+public:
+    virtual void sound() {
+        std::cout &lt;&lt; &quot;Some sound&quot; &lt;&lt; std::endl;
+    }
+};
+
+class Dog : public Animal {
+public:
+    void sound() override {
+        std::cout &lt;&lt; &quot;Woof!&quot; &lt;&lt; std::endl;
+    }
+};
+
+int main() {
+    Animal* a = new Dog();
+    a-&gt;sound();
+}</code></div></div></pre>
+                            <li><strong>Virtual Function:</strong> A function that can be overridden in a derived class.
+                            </li>
+                            <li><strong>Override:</strong> Replacing a base class method with a derived class method..
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="step mt-4">
+                    <div class="step mt-4">
+                        <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">4. Encapsulation</h2>
+                        <ul class="pl-5 space-y-2">
+                            <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
+                                <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
+                                    <span>cpp</span>
+                                    <div class="flex items-center">
+                                        <button onclick="copyCode(this)" class="copyBtn flex items-center">
+                                                <i class="fa-solid fa-lg fa-copy"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="overflow-y-auto" dir="ltr"><code class="language-cpp sm:text-sm text-xs p-0 text-slate-200">class Employee {
+private:
+    int salary;
+
+public:
+    void setSalary(int s) {
+        salary = s;
+    }
+    
+    int getSalary() {
+        return salary;
+    }
+};
+</code></div></div></pre>
+                            <li><strong>Private Members:</strong> Members that cannot be accessed outside the class.
+                            </li>
+                            <li><strong>Override:</strong> Methods to access and modify private members.</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- Memory Management -->
+        <section class="main-section mt-8" id="Memory_Management">
+            <header class="sm:text-3xl text-lg font-semibold text-slate-900 dark:text-slate-200">Memory Management
+            </header>
+            <article class="text-slate-700 dark:text-slate-400 sm:text-lg text-sm mt-2">
+                <div class="step mt-4">
+                    <div class="step mt-4">
+                        <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">1. Dynamic Memory Allocation</h2>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li><strong>new:</strong> Allocates memory
+                                <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
+                                    <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
+                                        <span>cpp</span>
+                                        <div class="flex items-center">
+                                            <button onclick="copyCode(this)" class="copyBtn flex items-center">
+                                                <i class="fa-solid fa-lg fa-copy"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="overflow-y-auto" dir="ltr"><code class="language-cpp sm:text-sm text-xs p-0 text-slate-200">int* ptr = new int;</code></div></div></pre>
+                            </li>
+                            <li><strong>deleete:</strong> deallocates memory
+                                <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
+                                    <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
+                                        <span>cpp</span>
+                                        <div class="flex items-center">
+                                            <button onclick="copyCode(this)" class="copyBtn flex items-center">
+                                                <i class="fa-solid fa-lg fa-copy"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="overflow-y-auto" dir="ltr"><code class="language-cpp sm:text-sm text-xs p-0 text-slate-200">delete ptr;</code></div></div></pre>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="step mt-4">
+                    <div class="step mt-4">
+                        <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">2. Pointers and References</h2>
+                        <ul class="pl-5 space-y-2">
+                            <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
+                                <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
+                                    <span>cpp</span>
+                                    <div class="flex items-center">
+                                        <button onclick="copyCode(this)" class="copyBtn flex items-center">
+                                                <i class="fa-solid fa-lg fa-copy"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="overflow-y-auto" dir="ltr"><code class="language-cpp sm:text-sm text-xs p-0 text-slate-200">int x = 10;
+int* ptr = &amp;x; // pointer to x
+int&amp; ref = x;  // reference to x
+</code></div></div></pre>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- Standard Template Library (STL) -->
+        <section class="main-section mt-8" id="Standard_Template_Library">
+            <header class="sm:text-3xl text-lg font-semibold text-slate-900 dark:text-slate-200">Standard Template
+                Library</header>
+            <article class="text-slate-700 dark:text-slate-400 sm:text-lg text-sm mt-2">
+                <div class="step mt-4">
+                    <div class="step mt-4">
+                        <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">1. Containers</h2>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li><strong>Vector:</strong> Dynamic array.
+                                <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
+                                    <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
+                                        <span>cpp</span>
+                                        <div class="flex items-center">
+                                            <button onclick="copyCode(this)" class="copyBtn flex items-center">
+                                                <i class="fa-solid fa-lg fa-copy"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="overflow-y-auto" dir="ltr"><code class="language-cpp sm:text-sm text-xs p-0 text-slate-200">std::vector&lt;int&gt; numbers;
+numbers.push_back(10);
+</code></div></div></pre>
+                            </li>
+                            <li><strong>Map:</strong> Key-value pairs
+                                <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
+                                    <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
+                                        <span>cpp</span>
+                                        <div class="flex items-center">
+                                            <button onclick="copyCode(this)" class="copyBtn flex items-center">
+                                                <i class="fa-solid fa-lg fa-copy"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="overflow-y-auto" dir="ltr"><code class="language-cpp sm:text-sm text-xs p-0 text-slate-200">std::map&lt;std::string, int&gt; age;
+age[&quot;Alice&quot;] = 25;
+</code></div></div></pre>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="step mt-4">
+                    <div class="step mt-4">
+                        <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">2. Algorithms</h2>
+                        <ul class="pl-5 space-y-2">
+                            <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
+                                <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
+                                    <span>cpp</span>
+                                    <div class="flex items-center">
+                                        <button onclick="copyCode(this)" class="copyBtn flex items-center">
+                                                <i class="fa-solid fa-lg fa-copy"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="overflow-y-auto" dir="ltr"><code class="language-cpp sm:text-sm text-xs p-0 text-slate-200">std::sort(numbers.begin(), numbers.end());</code></div></div></pre>
+                        </ul>
+                    </div>
+                </div>
+                <div class="step mt-4">
+                    <div class="step mt-4">
+                        <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">3. Iterators</h2>
+                        <ul class="pl-5 space-y-2">
+                            <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
+                                <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
+                                    <span>cpp</span>
+                                    <div class="flex items-center">
+                                        <button onclick="copyCode(this)" class="copyBtn flex items-center">
+                                                <i class="fa-solid fa-lg fa-copy"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="overflow-y-auto" dir="ltr"><code class="language-cpp sm:text-sm text-xs p-0 text-slate-200">for (auto it = numbers.begin(); it != numbers.end(); ++it) {
+    std::cout &lt;&lt; *it &lt;&lt; std::endl;
+}</code></div></div></pre>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- Error Handling -->
+        <section class="main-section mt-8" id="Error_Handling">
+            <header class="sm:text-3xl text-lg font-semibold text-slate-900 dark:text-slate-200">Error Handling</header>
+            <article class="text-slate-700 dark:text-slate-400 sm:text-lg text-sm mt-2">
+                <div class="step mt-4">
+                    <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">1. Exceptions</h2>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
+                                    <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
+                                        <span>cpp</span>
+                                        <div class="flex items-center">
+                                            <button onclick="copyCode(this)" class="copyBtn flex items-center">
+                                                <i class="fa-solid fa-lg fa-copy"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="overflow-y-auto" dir="ltr"><code class="language-cpp sm:text-sm text-xs p-0 text-slate-200">std::vector&lt;int&gt; numbers;
+numbers.push_back(10);
+</code></div></div></pre>
+                        <li><strong>throw:</strong> Used to signal the occurrence of an error.</li>
+                        <li><strong>catch:</strong> Used to handle the error</li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+        <!-- Best Practices -->
+        <section class="main-section mt-8" id="Best_Practices">
+            <header class="sm:text-3xl text-lg font-semibold text-slate-900 dark:text-slate-200">Best Practices</header>
+            <article class="text-slate-700 dark:text-slate-400 sm:text-lg text-sm mt-2">
+                <div class="step mt-4">
+                    <ul class="list-decimal pl-5 space-y-2">
+                        <li>Use meaningful variable names.</li>
+                        <li>Keep function short and focused.</li>
+                        <li>Use comments to explain complex code.</li>
+                        <li>Handle exceptions and erros gracefully.</li>
+                        <li>Write modular and reusable code.</li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+        <section class="main-section mt-8" id="Conclusion">
+            <header class="sm:text-3xl text-lg font-semibold text-slate-900 dark:text-slate-200">Conclusion</header>
+            <article class="text-slate-700 dark:text-slate-400 sm:text-lg text-sm mt-2">
+                <p>
+                    <span class=" dark:text-white text-gray-900">C++ </span> is a powerful and versatile programming
+                    language suitable for a wide range of applications, from system-level programming to game
+                    development. Understanding its syntax, core concepts, and best practices will allow you to harness
+                    its full potential.
+                </p>
+            </article>
+        </section>
+        <footer class="text-slate-700 dark:text-slate-400 sm:text-lg text-sm mt-2 flex items-end justify-center h-44">
+            <div class="flex row gap-2 items-center px-2 hover:bg-blue-400/10 rounded-lg">
+                <i class="fa-brands fa-instagram text-blue-400"></i>
+                <a class="text-blue-400"
+                href="https://www.instagram.com/_bil.23_/" target="_blank">My Instagram</a>
+            </div>
+        </footer>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+        const btnNavBar = document.getElementById('btn-navbar');
+        const navbar = document.getElementById('navbar');
+        const mainDoc = document.getElementById('main-doc');
+
+        btnNavBar.addEventListener('click', function () {
+            if (navbar.classList.contains('-translate-x-full')) {
+                navbar.classList.remove('-translate-x-full');
+                mainDoc.classList.add('opacity-30');
+            }
+        })
+
+
+        document.addEventListener('click', function (e) {
+            if (!navbar.contains(e.target) && !btnNavBar.contains(e.target)) {
+                navbar.classList.add('-translate-x-full');
+                mainDoc.classList.remove('opacity-30');
+            }
+        })
+        function copyCode(elementBtn) {
+            const toElementCode = elementBtn.parentElement.parentElement.nextElementSibling.children[0];
+            const textToCopy = toElementCode.innerText;
+            // <i class="fa-solid fa-check"></i>
+            // Menggunakan API Clipboard modern
+            navigator.clipboard.writeText(textToCopy).then(function() {
+                var icon = elementBtn.children[0];
+                console.log(icon)
+                icon.classList.remove("fa-copy");
+                icon.classList.add("fa-check");
+                setInterval(() => {
+                    icon.classList.add("fa-copy");
+                    icon.classList.remove("fa-check");
+                }, 5000);
+            }).catch(function(error) {
+                console.error('Failed to copy text: ', error);
+            });
+        }
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const html = document.documentElement;
+        darkModeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            // Optional: simpan preferensi di localStorage
+            if (html.classList.contains('dark')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // Optional: atur preferensi mode berdasarkan localStorage
+        if (localStorage.getItem('theme') === 'dark') {
+            html.classList.add('dark');
+        }
+
+    </script>
+
+</body>
+
+</html>

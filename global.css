@@ -1,0 +1,26 @@
+:root {
+  --background: #16161a;
+  --secondary-background: #242629;
+  --highLight: #649ad2;
+  --headline: #fffffe;
+  --paragraph: #94a1b2;
+}
+
+body {
+  font-family: inter, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* WebKit */
+::-webkit-scrollbar-track {
+  background: #111827;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+}
+
+/* Firefox */
+* {
+  scrollbar-color: #888 #606265;
+}
