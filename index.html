@@ -20,9 +20,9 @@
 
 <body cz-shortcut-listen="true" class="bg-gray-200 dark:bg-gray-950">
     <button id="btn-navbar" data-drawer-target="navbar" data-drawer-toggle="navbar" aria-controls="navbar" type="button"
-        class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+        class="inline-flex items-center fixed p-2 mt-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
         <span class="sr-only">Open sidebar</span>
-        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+        <svg class="w-4 h-4" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg">
             <path clip-rule="evenodd" fill-rule="evenodd"
                 d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
@@ -106,7 +106,7 @@
             </ul>
         </div>
     </nav>
-    <main id="main-doc" class="sm:px-24 px-6 py-6 ml-0 sm:ml-72 text-slate-900 dark:text-slate-200">
+    <main id="main-doc" class="sm:px-24 px-8 py-3 ml-0 sm:ml-72 text-slate-900 dark:text-slate-200">
         <header class="font-bold sm:text-4xl text-xl border-b-[1px] border-gray-500 border-opacity-50 pb-6 mb-6">
             <h1>C++ Technical Documentation</h1>
         </header>
@@ -135,7 +135,7 @@
         <section class="main-section mt-8" id="Installation">
             <header class="sm:text-3xl text-lg font-semibold text-slate-900 dark:text-slate-200">Installation</header>
             <article class="text-slate-700 dark:text-slate-400 sm:text-lg text-sm mt-2">
-                <div class="step mt-4">
+                <div class="mt-4">
                     <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">1. Windows</h2>
                     <ol class="list-decimal pl-5 space-y-2">
                         <li>Download and Install a Compiler:
@@ -190,7 +190,7 @@
                         </li>
                     </ol>
                 </div>
-                <div class="step mt-4">
+                <div class="mt-4">
                     <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">2. Linux</h2>
                     <ol class="list-decimal pl-5 space-y-2">
                         <li>Open a terminal.</li>
@@ -256,7 +256,7 @@
                         </li>
                     </ol>
                 </div>
-                <div class="step mt-4">
+                <div class="mt-4">
                     <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">3. macOS</h2>
                     <ol class="list-decimal pl-5 space-y-2">
                         <li>Install <a class="text-blue-400 hover:underline decoration-1"
@@ -316,7 +316,7 @@
             <header class="sm:text-3xl text-lg font-semibold text-slate-900 dark:text-slate-200">Syntax Overview
             </header>
             <article class="text-slate-700 dark:text-slate-400 sm:text-lg text-sm mt-2">
-                <div class="step mt-4">
+                <div class="mt-4">
                     <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">1. Basic Structure</h2>
                     <ul class="list-disc pl-5 space-y-2">
                         <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
@@ -344,7 +344,7 @@ int main() {
                         <li><strong>return 0:</strong> Indicates successful program termination.</li>
                     </ul>
                 </div>
-                <div class="step mt-4">
+                <div class="mt-4">
                     <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">2. Data Types</h2>
                     <ul class="list-decimal pl-5 space-y-2">
                         <li>
@@ -375,7 +375,7 @@ int main() {
                         </li>
                     </ul>
                 </div>
-                <div class="step mt-4">
+                <div class="mt-4">
                     <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">3. Variables and Constants</h2>
                     <div class="ml-3 mt-1">
                         Variables are used to store data in memory, while constants are immutable values that cannot change during program execution.
@@ -394,7 +394,7 @@ const double PI = 3.14; // Constant
                         </div></pre>
                     </div>
                 </div>
-                <div class="step mt-4">
+                <div class="mt-4">
                     <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">4. Operators</h2>
                     <div class="ml-3 mt-1">
                         <p>Operators are used to perform operations on variables and values. C++ supports several types of operators:</p>
@@ -430,7 +430,7 @@ const double PI = 3.14; // Constant
                         </ul>
                     </div>
                 </div>
-                <div class="step mt-4">
+                <div class="mt-4">
                     <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">5. Control Flow Statements</h2>
                     <ol class="list-decimal pl-5 space-y-2">
                         <li>Conditional Statements
@@ -516,10 +516,11 @@ do {
         <section class="main-section mt-8" id="Functions">
             <header class="sm:text-3xl text-lg font-semibold text-slate-900 dark:text-slate-200">Functions</header>
             <article class="text-slate-700 dark:text-slate-400 sm:text-lg text-sm mt-2">
-                <div class="step mt-4">
-                    <div class="step mt-4">
-                        <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">1. Function Declaration</h2>
+                <div class="mt-4">
+                    <div class="mt-4">
+                        <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">1. Function Declaration and Definition</h2>
                         <ul class="list-disc pl-5 space-y-2">
+                            <p>Functions allow you to encapsulate code in reusable units.</p>
                             <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
                                 <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
                                     <span>cpp</span>
@@ -542,10 +543,11 @@ do {
                         </ul>
                     </div>
                 </div>
-                <div class="step mt-4">
-                    <div class="step mt-4">
+                <div class="mt-4">
+                    <div class="mt-4">
                         <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">2. Function Overloading</h2>
                         <ul class="pl-5 space-y-2">
+                            <p>C++ supports function overloading, allowing multiple functions with the same name but different parameter types.</p>
                             <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
                                 <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
                                     <span>cpp</span>
@@ -566,17 +568,41 @@ double add(double a, double b) {
                         </ul>
                     </div>
                 </div>
+                <div class="mt-4">
+                    <div class="mt-4">
+                        <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">3. Inline Function</h2>
+                        <ul class="pl-5 space-y-2">
+                            <p>Inline functions suggest to the compiler to insert the function code directly into the caller's code to avoid function call overhead.</p>
+                            <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
+                                <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
+                                    <span>cpp</span>
+                                    <div class="flex items-center">
+                                        <button onclick="copyCode(this)" class="copyBtn flex items-center">
+                                            <i class="fa-solid fa-lg fa-copy"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="overflow-y-auto" dir="ltr"><code class="language-cpp sm:text-sm text-xs p-0 text-slate-200">inline int multiply(int a, int b) {
+    return a * b;
+}
+</code></div></div></pre>
+                        </ul>
+                    </div>
+                </div>
             </article>
         </section>
 
         <!-- object-oriented programming -->
         <section class="main-section mt-8" id="Object_Oriented_Programming">
-            <header class="sm:text-3xl text-lg font-semibold text-slate-900 dark:text-slate-200">Object Oriented
-                Programming</header>
+            <header class="sm:text-3xl text-lg font-semibold text-slate-900 dark:text-slate-200">Object Oriented Programming</header>
             <article class="text-slate-700 dark:text-slate-400 sm:text-lg text-sm mt-2">
-                <div class="step mt-4">
-                    <div class="step mt-4">
+                <div class="mt-4">
+                    <p>C++ supports object-oriented programming (OOP) principles such as encapsulation, inheritance, and polymorphism.</p>
+                </div>
+                <div class="mt-4">
+                    <div class="mt-4">
                         <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">1. Classes and Objects</h2>
+                        <p>A class is a user-defined data type that represents a blueprint for objects.</p>
                         <ul class="list-disc pl-5 space-y-2">
                             <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
                                 <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
@@ -613,10 +639,11 @@ int main() {
                         </ul>
                     </div>
                 </div>
-                <div class="step mt-4">
-                    <div class="step mt-4">
+                <div class="mt-4">
+                    <div class="mt-4">
                         <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">2. Inheritance</h2>
                         <ul class="pl-5 space-y-2">
+                            <p>Inheritance allows one class (derived class) to inherit properties and behavior from another class (base class).</p>
                             <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
                                 <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
                                     <span>cpp</span>
@@ -643,10 +670,11 @@ public:
                         </ul>
                     </div>
                 </div>
-                <div class="step mt-4">
-                    <div class="step mt-4">
+                <div class="mt-4">
+                    <div class="mt-4">
                         <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">3. Polymorphism</h2>
                         <ul class="pl-5 space-y-2">
+                            <p>Polymorphism allows for the use of a single interface to represent different data types or behaviors. It can be implemented using virtual functions.</p>
                             <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
                                 <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
                                     <span>cpp</span>
@@ -681,10 +709,11 @@ int main() {
                         </ul>
                     </div>
                 </div>
-                <div class="step mt-4">
-                    <div class="step mt-4">
+                <div class="mt-4">
+                    <div class="mt-4">
                         <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">4. Encapsulation</h2>
                         <ul class="pl-5 space-y-2">
+                            <p>Encapsulation restricts direct access to object data and methods by making members private and providing public methods for interaction.</p>
                             <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
                                 <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
                                     <span>cpp</span>
@@ -722,10 +751,14 @@ public:
             <header class="sm:text-3xl text-lg font-semibold text-slate-900 dark:text-slate-200">Memory Management
             </header>
             <article class="text-slate-700 dark:text-slate-400 sm:text-lg text-sm mt-2">
-                <div class="step mt-4">
-                    <div class="step mt-4">
+                <div class="mt-4">
+                    <p>C++ provides both automatic and manual memory management. Memory is typically divided into the stack (for local variables) and the heap (for dynamically allocated memory).</p>
+                </div>
+                <div class="mt-4">
+                    <div class="mt-4">
                         <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">1. Dynamic Memory Allocation</h2>
                         <ul class="list-disc pl-5 space-y-2">
+                            <p>Dynamic memory allocation uses pointers and requires manual memory management with <span class="bg-zinc-400/30 rounded-sm">new</span> and <span class="bg-zinc-400/30 rounded-sm">delete</span>.</p>
                             <li><strong>new:</strong> Allocates memory
                                 <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
                                     <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
@@ -736,7 +769,7 @@ public:
                                             </button>
                                         </div>
                                     </div>
-                                    <div class="overflow-y-auto" dir="ltr"><code class="language-cpp sm:text-sm text-xs p-0 text-slate-200">int* ptr = new int;</code></div></div></pre>
+                                    <div class="overflow-y-auto" dir="ltr"><code class="language-cpp sm:text-sm text-xs p-0 text-slate-2 00">int* ptr = new int;</code></div></div></pre>
                             </li>
                             <li><strong>deleete:</strong> deallocates memory
                                 <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
@@ -753,10 +786,11 @@ public:
                         </ul>
                     </div>
                 </div>
-                <div class="step mt-4">
-                    <div class="step mt-4">
-                        <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">2. Pointers and References</h2>
+                <div class="mt-4">
+                    <div class="mt-4">
+                        <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">2. Smart Pointers</h2>
                         <ul class="pl-5 space-y-2">
+                            <p>C++11 introduced smart pointers to automate memory management and avoid memory leaks.</p>
                             <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
                                 <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
                                     <span>cpp</span>
@@ -766,11 +800,14 @@ public:
                                         </button>
                                     </div>
                                 </div>
-                                <div class="overflow-y-auto" dir="ltr"><code class="language-cpp sm:text-sm text-xs p-0 text-slate-200">int x = 10;
-int* ptr = &amp;x; // pointer to x
-int&amp; ref = x;  // reference to x
+                                <div class="overflow-y-auto" dir="ltr"><code class="language-cpp sm:text-sm text-xs p-0 text-slate-200">#include &lt;memory&gt;
+
+std::shared_ptr&lt;int&gt; p1 = std::make_shared&lt;int&gt;(10);
+
 </code></div></div></pre>
                         </ul>
+                        <li><strong>unique_ptr:</strong> Allows only one owner of the object.</li>
+                        <li><strong>shared_ptr:</strong> Allows multiple owners of the object, with reference counting.</li>
                     </div>
                 </div>
             </article>
@@ -781,8 +818,8 @@ int&amp; ref = x;  // reference to x
             <header class="sm:text-3xl text-lg font-semibold text-slate-900 dark:text-slate-200">Standard Template
                 Library</header>
             <article class="text-slate-700 dark:text-slate-400 sm:text-lg text-sm mt-2">
-                <div class="step mt-4">
-                    <div class="step mt-4">
+                <div class="mt-4">
+                    <div class="mt-4">
                         <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">1. Containers</h2>
                         <ul class="list-disc pl-5 space-y-2">
                             <li><strong>Vector:</strong> Dynamic array.
@@ -816,8 +853,8 @@ age[&quot;Alice&quot;] = 25;
                         </ul>
                     </div>
                 </div>
-                <div class="step mt-4">
-                    <div class="step mt-4">
+                <div class="mt-4">
+                    <div class="mt-4">
                         <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">2. Algorithms</h2>
                         <ul class="pl-5 space-y-2">
                             <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
@@ -833,8 +870,8 @@ age[&quot;Alice&quot;] = 25;
                         </ul>
                     </div>
                 </div>
-                <div class="step mt-4">
-                    <div class="step mt-4">
+                <div class="mt-4">
+                    <div class="mt-4">
                         <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">3. Iterators</h2>
                         <ul class="pl-5 space-y-2">
                             <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
@@ -859,7 +896,7 @@ age[&quot;Alice&quot;] = 25;
         <section class="main-section mt-8" id="Error_Handling">
             <header class="sm:text-3xl text-lg font-semibold text-slate-900 dark:text-slate-200">Error Handling</header>
             <article class="text-slate-700 dark:text-slate-400 sm:text-lg text-sm mt-2">
-                <div class="step mt-4">
+                <div class="mt-4">
                     <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">1. Exceptions</h2>
                     <ul class="list-disc pl-5 space-y-2">
                         <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
@@ -884,7 +921,7 @@ numbers.push_back(10);
         <section class="main-section mt-8" id="Best_Practices">
             <header class="sm:text-3xl text-lg font-semibold text-slate-900 dark:text-slate-200">Best Practices</header>
             <article class="text-slate-700 dark:text-slate-400 sm:text-lg text-sm mt-2">
-                <div class="step mt-4">
+                <div class="mt-4">
                     <ul class="list-decimal pl-5 space-y-2">
                         <li>Use meaningful variable names.</li>
                         <li>Keep function short and focused.</li>
@@ -931,6 +968,7 @@ numbers.push_back(10);
 
 
         document.addEventListener('click', function (e) {
+
             if (!navbar.contains(e.target) && !btnNavBar.contains(e.target)) {
                 navbar.classList.add('-translate-x-full');
                 mainDoc.classList.remove('opacity-30');
@@ -939,7 +977,6 @@ numbers.push_back(10);
         function copyCode(elementBtn) {
             const toElementCode = elementBtn.parentElement.parentElement.nextElementSibling.children[0];
             const textToCopy = toElementCode.innerText;
-            // <i class="fa-solid fa-check"></i>
             // Menggunakan API Clipboard modern
             navigator.clipboard.writeText(textToCopy).then(function() {
                 var icon = elementBtn.children[0];
@@ -952,6 +989,7 @@ numbers.push_back(10);
                 }, 5000);
             }).catch(function(error) {
                 console.error('Failed to copy text: ', error);
+                
             });
         }
         const darkModeToggle = document.getElementById('darkModeToggle');
