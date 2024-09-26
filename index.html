@@ -755,108 +755,131 @@ public:
                     <p>C++ provides both automatic and manual memory management. Memory is typically divided into the stack (for local variables) and the heap (for dynamically allocated memory).</p>
                 </div>
                 <div class="mt-4">
-                    <div class="mt-4">
-                        <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">1. Dynamic Memory Allocation</h2>
-                        <ul class="list-disc pl-5 space-y-2">
-                            <p>Dynamic memory allocation uses pointers and requires manual memory management with <span class="bg-zinc-400/30 rounded-sm">new</span> and <span class="bg-zinc-400/30 rounded-sm">delete</span>.</p>
-                            <li><strong>new:</strong> Allocates memory
-                                <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
-                                    <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
-                                        <span>cpp</span>
-                                        <div class="flex items-center">
-                                            <button onclick="copyCode(this)" class="copyBtn flex items-center">
-                                                <i class="fa-solid fa-lg fa-copy"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="overflow-y-auto" dir="ltr"><code class="language-cpp sm:text-sm text-xs p-0 text-slate-2 00">int* ptr = new int;</code></div></div></pre>
-                            </li>
-                            <li><strong>deleete:</strong> deallocates memory
-                                <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
-                                    <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
-                                        <span>cpp</span>
-                                        <div class="flex items-center">
-                                            <button onclick="copyCode(this)" class="copyBtn flex items-center">
-                                                <i class="fa-solid fa-lg fa-copy"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="overflow-y-auto" dir="ltr"><code class="language-cpp sm:text-sm text-xs p-0 text-slate-200">delete ptr;</code></div></div></pre>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="mt-4">
-                    <div class="mt-4">
-                        <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">2. Smart Pointers</h2>
-                        <ul class="pl-5 space-y-2">
-                            <p>C++11 introduced smart pointers to automate memory management and avoid memory leaks.</p>
+                    <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">1. Dynamic Memory Allocation</h2>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <p>Dynamic memory allocation uses pointers and requires manual memory management with <span class="bg-zinc-400/30 rounded-sm">new</span> and <span class="bg-zinc-400/30 rounded-sm">delete</span>.</p>
+                        <li><strong>new:</strong> Allocates memory
                             <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
                                 <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
                                     <span>cpp</span>
                                     <div class="flex items-center">
                                         <button onclick="copyCode(this)" class="copyBtn flex items-center">
-                                                <i class="fa-solid fa-lg fa-copy"></i>
+                                            <i class="fa-solid fa-lg fa-copy"></i>
                                         </button>
                                     </div>
                                 </div>
-                                <div class="overflow-y-auto" dir="ltr"><code class="language-cpp sm:text-sm text-xs p-0 text-slate-200">#include &lt;memory&gt;
+                                <div class="overflow-y-auto" dir="ltr"><code class="language-cpp sm:text-sm text-xs p-0 text-slate-2 00">int* ptr = new int;</code></div></div></pre>
+                        </li>
+                        <li><strong>deleete:</strong> deallocates memory
+                            <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
+                                <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
+                                    <span>cpp</span>
+                                    <div class="flex items-center">
+                                        <button onclick="copyCode(this)" class="copyBtn flex items-center">
+                                            <i class="fa-solid fa-lg fa-copy"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="overflow-y-auto" dir="ltr"><code class="language-cpp sm:text-sm text-xs p-0 text-slate-200">delete ptr;</code></div></div></pre>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mt-4">
+                    <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">2. Smart Pointers</h2>
+                    <ul class="pl-5 space-y-2">
+                        <p>C++11 introduced smart pointers to automate memory management and avoid memory leaks.</p>
+                        <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
+                            <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
+                                <span>cpp</span>
+                                <div class="flex items-center">
+                                    <button onclick="copyCode(this)" class="copyBtn flex items-center">
+                                            <i class="fa-solid fa-lg fa-copy"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="overflow-y-auto" dir="ltr"><code class="language-cpp sm:text-sm text-xs p-0 text-slate-200">#include &lt;memory&gt;
 
 std::shared_ptr&lt;int&gt; p1 = std::make_shared&lt;int&gt;(10);
 
 </code></div></div></pre>
-                        </ul>
-                        <li><strong>unique_ptr:</strong> Allows only one owner of the object.</li>
-                        <li><strong>shared_ptr:</strong> Allows multiple owners of the object, with reference counting.</li>
-                    </div>
+                    <li><strong>unique_ptr:</strong> Allows only one owner of the object.</li>
+                    <li><strong>shared_ptr:</strong> Allows multiple owners of the object, with reference counting.</li>
+                    </ul>
                 </div>
             </article>
         </section>
-
-        <!-- Standard Template Library (STL) -->
-        <section class="main-section mt-8" id="Standard_Template_Library">
-            <header class="sm:text-3xl text-lg font-semibold text-slate-900 dark:text-slate-200">Standard Template
-                Library</header>
+        
+        <!--  Advanced Concepts -->
+        <section class="main-section mt-8" id="Advanced_Concepts">
+            <header class="sm:text-3xl text-lg font-semibold text-slate-900 dark:text-slate-200"> Advanced Concepts</header>
             <article class="text-slate-700 dark:text-slate-400 sm:text-lg text-sm mt-2">
                 <div class="mt-4">
-                    <div class="mt-4">
-                        <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">1. Containers</h2>
-                        <ul class="list-disc pl-5 space-y-2">
-                            <li><strong>Vector:</strong> Dynamic array.
-                                <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
-                                    <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
-                                        <span>cpp</span>
-                                        <div class="flex items-center">
-                                            <button onclick="copyCode(this)" class="copyBtn flex items-center">
-                                                <i class="fa-solid fa-lg fa-copy"></i>
-                                            </button>
-                                        </div>
+                    <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">1. Templates</h2>
+                    <ul class="pl-5 space-y-2">
+                        <li><p>Templates allow for writing generic code that can work with any data type.</p>
+                            <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
+                                <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
+                                    <span>cpp</span>
+                                    <div class="flex items-center">
+                                        <button onclick="copyCode(this)" class="copyBtn flex items-center">
+                                            <i class="fa-solid fa-lg fa-copy"></i>
+                                        </button>
                                     </div>
-                                    <div class="overflow-y-auto" dir="ltr"><code class="language-cpp sm:text-sm text-xs p-0 text-slate-200">std::vector&lt;int&gt; numbers;
-numbers.push_back(10);
+                                </div>
+                                <div class="overflow-y-auto" dir="ltr"><code class="language-cpp sm:text-sm text-xs p-0 text-slate-200">template &lt;typename T&gt;
+T add(T a, T b) {
+    return a + b;
+}
+
+int main() {
+    std::cout &lt;&lt; add(5, 3) &lt;&lt; std::endl;      // int
+    std::cout &lt;&lt; add(5.5, 3.5) &lt;&lt; std::endl;  // double
+}
 </code></div></div></pre>
-                            </li>
-                            <li><strong>Map:</strong> Key-value pairs
-                                <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
-                                    <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
-                                        <span>cpp</span>
-                                        <div class="flex items-center">
-                                            <button onclick="copyCode(this)" class="copyBtn flex items-center">
-                                                <i class="fa-solid fa-lg fa-copy"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="overflow-y-auto" dir="ltr"><code class="language-cpp sm:text-sm text-xs p-0 text-slate-200">std::map&lt;std::string, int&gt; age;
-age[&quot;Alice&quot;] = 25;
-</code></div></div></pre>
-                            </li>
-                        </ul>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
                 <div class="mt-4">
-                    <div class="mt-4">
-                        <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">2. Algorithms</h2>
-                        <ul class="pl-5 space-y-2">
+                    <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">2. Standard Template Library (STL)</h2>
+                    <ul class="pl-5 space-y-2">
+                        <li>
+                            <p>The STL provides a set of template classes and functions for common data structures and algorithms, including:</p>
+                        </li>
+                        <li>
+                            <p><strong>Containers:</strong>vector, list, map, set, etc.</p>
+                            <ul class="list-disc pl-5 space-y-2 sm:text-sm text-xs">
+                                <li>Vector: Dynamic array.
+                                    <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
+                                        <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
+                                            <span>cpp</span>
+                                            <div class="flex items-center">
+                                                <button onclick="copyCode(this)" class="copyBtn flex items-center">
+                                                    <i class="fa-solid fa-lg fa-copy"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="overflow-y-auto" dir="ltr"><code class="language-cpp sm:text-sm text-xs p-0 text-slate-200">std::vector&lt;int&gt; numbers;
+numbers.push_back(10);
+</code></div></div></pre>
+                                </li>
+                                <li>Map: Key-value pairs
+                                    <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
+                                        <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
+                                            <span>cpp</span>
+                                            <div class="flex items-center">
+                                                <button onclick="copyCode(this)" class="copyBtn flex items-center">
+                                                    <i class="fa-solid fa-lg fa-copy"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="overflow-y-auto" dir="ltr"><code class="language-cpp sm:text-sm text-xs p-0 text-slate-200">std::map&lt;std::string, int&gt; age;
+age[&quot;Alice&quot;] = 25;
+</code></div></div></pre>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p><strong>Algorithms:</strong>Sorting, searching, etc.</p>
                             <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
                                 <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
                                     <span>cpp</span>
@@ -867,13 +890,9 @@ age[&quot;Alice&quot;] = 25;
                                     </div>
                                 </div>
                                 <div class="overflow-y-auto" dir="ltr"><code class="language-cpp sm:text-sm text-xs p-0 text-slate-200">std::sort(numbers.begin(), numbers.end());</code></div></div></pre>
-                        </ul>
-                    </div>
-                </div>
-                <div class="mt-4">
-                    <div class="mt-4">
-                        <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">3. Iterators</h2>
-                        <ul class="pl-5 space-y-2">
+                        </li>
+                        <li>
+                            <p><strong>Interators: </strong>Used to traverse containers.</p>
                             <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
                                 <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
                                     <span>cpp</span>
@@ -886,8 +905,53 @@ age[&quot;Alice&quot;] = 25;
                                 <div class="overflow-y-auto" dir="ltr"><code class="language-cpp sm:text-sm text-xs p-0 text-slate-200">for (auto it = numbers.begin(); it != numbers.end(); ++it) {
     std::cout &lt;&lt; *it &lt;&lt; std::endl;
 }</code></div></div></pre>
-                        </ul>
-                    </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mt-4">
+                    <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">3. Lambda Expressions</h2>
+                    <ul class="pl-5 space-y-2">
+                        <p>Lambda expressions are anonymous functions that can capture variables from their scope.</p>
+                        <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
+                            <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
+                                <span>cpp</span>
+                                <div class="flex items-center">
+                                    <button onclick="copyCode(this)" class="copyBtn flex items-center">
+                                            <i class="fa-solid fa-lg fa-copy"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="overflow-y-auto" dir="ltr"><code class="language-cpp sm:text-sm text-xs p-0 text-slate-200">auto sum = [](int a, int b) -&gt; int {
+    return a + b;
+};
+</code></div></div></pre>
+                    </ul>
+                </div>
+                <div class="mt-4">
+                    <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">4. Concurrency (C++11 and beyond)</h2>
+                    <ul class="pl-5 space-y-2">
+                        <p>C++ supports multithreading with libraries like <thread> to achieve parallelism..</p>
+                        <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
+                            <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
+                                <span>cpp</span>
+                                <div class="flex items-center">
+                                    <button onclick="copyCode(this)" class="copyBtn flex items-center">
+                                            <i class="fa-solid fa-lg fa-copy"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="overflow-y-auto" dir="ltr"><code class="language-cpp sm:text-sm text-xs p-0 text-slate-200">#include &lt;thread&gt;
+
+void task() {
+    std::cout &lt;&lt; &quot;Thread is running&quot; &lt;&lt; std::endl;
+}
+
+int main() {
+    std::thread t1(task);
+    t1.join();  // Wait for the thread to finish
+}
+</code></div></div></pre>
+                    </ul>
                 </div>
             </article>
         </section>
