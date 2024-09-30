@@ -103,6 +103,46 @@
                         <span class="flex-1 whitespace-nowrap">Conclusion</span>
                     </a>
                 </li>
+                <li>
+                    <button type="button" onclick="dropDown(this.nextElementSibling)"
+                            class="flex items-center text-left align-top p-2 w-full text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+                      <span class="flex-1 whitespace-nowrap">Conclusion</span>
+                      <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
+                      </svg>
+                    </button>
+                    <ul class="hidden py-2 space-y-2">
+                      <li>
+                        <a href="#" class="flex items-center p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Products</a>
+                      </li>
+                      <li>
+                        <a href="#" class="flex items-center p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Billing</a>
+                      </li>
+                      <li>
+                        <a href="#" class="flex items-center p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Invoice</a>
+                      </li>
+                    </ul>
+                </li>
+                <li>
+                    <button type="button" onclick="dropDown(this.nextElementSibling)"
+                            class="flex items-center text-left align-top p-2 w-full text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+                      <span class="flex-1 whitespace-nowrap">Conclusion</span>
+                      <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
+                      </svg>
+                    </button>
+                    <ul class="hidden py-2 space-y-2">
+                      <li>
+                        <a href="#" class="flex items-center p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Products</a>
+                      </li>
+                      <li>
+                        <a href="#" class="flex items-center p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Billing</a>
+                      </li>
+                      <li>
+                        <a href="#" class="flex items-center p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Invoice</a>
+                      </li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </nav>
@@ -317,7 +357,7 @@
             </header>
             <article class="text-slate-700 dark:text-slate-400 sm:text-lg text-sm mt-2">
                 <div class="mt-4">
-                    <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">1. Basic Structure</h2>
+                    <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">1. Basic Structure of a C++ Program</h2>
                     <ul class="list-disc pl-5 space-y-2">
                         <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
                             <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
@@ -346,9 +386,8 @@ int main() {
                 </div>
                 <div class="mt-4">
                     <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">2. Data Types</h2>
-                    <ul class="list-decimal pl-5 space-y-2">
-                        <li>
-                            Primitive Data Types:
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>Primitive Data Types:</strong>
                             <div class="ml-3 mt-1 space-y-1">
                                 <p><strong>int:</strong> Integer type (e.g.,<span class="bg-zinc-400/30 rounded-sm"> int x = 10; </span>).</p>
                                 <p><strong>float, double:</strong> Floating-point types (e.g.,<span
@@ -361,16 +400,14 @@ int main() {
                                     (e.g.,<span class="bg-zinc-400/30 rounded-sm"> std::string name = "C++"; </span>).</p>
                             </div>
                         </li>
-                        <li>
-                            Derived Data Types:
+                        <li><strong>Derived Data Types:</strong>
                             <div class="ml-3 mt-1">
                             <p><strong>Array:</strong> Collection of elements of the same type (e.g., <span class="bg-zinc-400/30 rounded-sm"> int arr[5]; </span>).</p>
                             <p><strong>Pointer:</strong> Stores memory address of another variable(e.g., <span
                                     class="bg-zinc-400/30 rounded-sm"> int* ptr = &amp;a; </span>).</p>
                             </div>
                         </li>
-                        <li>
-                            User-Defined Data Type:
+                        <li><strong>User-Defined Data Type:</strong>
                             <p><strong>struct, class, enum union:</strong> Used to define custom data types.</p>
                         </li>
                     </ul>
@@ -398,7 +435,7 @@ const double PI = 3.14; // Constant
                     <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">4. Operators</h2>
                     <div class="ml-3 mt-1">
                         <p>Operators are used to perform operations on variables and values. C++ supports several types of operators:</p>
-                        <ul class="list-disc pl-5 space-y-2">
+                        <ul class="list-none pl-5 space-y-2">
                             <li><strong>Arithmetic Operators: </strong>
                                 <span class="bg-zinc-400/30 rounded-sm px-1">+</span>,
                                 <span class="bg-zinc-400/30 rounded-sm px-1">-</span>,
@@ -930,7 +967,7 @@ age[&quot;Alice&quot;] = 25;
                 <div class="mt-4">
                     <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">4. Concurrency (C++11 and beyond)</h2>
                     <ul class="pl-5 space-y-2">
-                        <p>C++ supports multithreading with libraries like <thread> to achieve parallelism..</p>
+                        <p>C++ supports multithreading with libraries like <span class="bg-zinc-400/30 rounded-sm px-1">&lt;thread&gt;</span>  to achieve parallelism..</p>
                         <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
                             <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
                                 <span>cpp</span>
@@ -972,8 +1009,14 @@ int main() {
                                             </button>
                                         </div>
                                     </div>
-                                    <div class="overflow-y-auto" dir="ltr"><code class="language-cpp sm:text-sm text-xs p-0 text-slate-200">std::vector&lt;int&gt; numbers;
-numbers.push_back(10);
+                                    <div class="overflow-y-auto" dir="ltr"><code class="language-cpp sm:text-sm text-xs p-0 text-slate-200">try {
+    int x = 10;
+    if (x == 10) {
+        throw std::runtime_error(&quot;Error occurred&quot;);
+    }
+} catch (std::exception&amp; e) {
+    std::cout &lt;&lt; e.what() &lt;&lt; std::endl;
+}
 </code></div></div></pre>
                         <li><strong>throw:</strong> Used to signal the occurrence of an error.</li>
                         <li><strong>catch:</strong> Used to handle the error</li>
@@ -981,17 +1024,46 @@ numbers.push_back(10);
                 </div>
             </article>
         </section>
+
+        <!-- Compilation Process -->
+        <section class="main-section mt-8" id="Error_Handling">
+            <header class="sm:text-3xl text-lg font-semibold text-slate-900 dark:text-slate-200">Error Handling</header>
+            <article class="text-slate-700 dark:text-slate-400 sm:text-lg text-sm mt-2">
+                <div class="mt-4">
+                    <p>The C++ compilation process consists of several stages:</p>
+                    <ul class="list-decimal pl-5 space-y-2">
+                        <li><strong>Preprocessing:</strong> Handles preprocessor directives like <span class="bg-zinc-400/30 rounded-sm px-1">#include</span> and <span class="bg-zinc-400/30 rounded-sm px-1">#define</span>.</li>
+                        <li><strong>Compilation:</strong> Converts source code into object files.</li>
+                        <li><strong>Linking:</strong> Links object files and libraries into an executable.</li>
+                        <li><strong>Execution:</strong> The generated binary is executed.</li>
+                        <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
+                                    <div class="bg-gray-50 dark:bg-gray-900 flex items-center relative sm:px-4 px-2 py-2 text-xs font-sans justify-between rounded-t-md">
+                                        <span>cpp</span>
+                                        <div class="flex items-center">
+                                            <button onclick="copyCode(this)" class="copyBtn flex items-center">
+                                                <i class="fa-solid fa-lg fa-copy"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="overflow-y-auto" dir="ltr"><code class="language-bash sm:text-sm text-xs p-0 text-slate-200">g++ -o myprogram main.cpp
+./myprogram
+</code></div></div></pre>
+                    </ul>
+                </div>
+            </article>
+        </section>
+        
         <!-- Best Practices -->
         <section class="main-section mt-8" id="Best_Practices">
             <header class="sm:text-3xl text-lg font-semibold text-slate-900 dark:text-slate-200">Best Practices</header>
             <article class="text-slate-700 dark:text-slate-400 sm:text-lg text-sm mt-2">
                 <div class="mt-4">
-                    <ul class="list-decimal pl-5 space-y-2">
-                        <li>Use meaningful variable names.</li>
-                        <li>Keep function short and focused.</li>
-                        <li>Use comments to explain complex code.</li>
-                        <li>Handle exceptions and erros gracefully.</li>
-                        <li>Write modular and reusable code.</li>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>Use consistent naming conventions (camelCase, snake_case, etc.).</li>
+                        <li>Minimize memory leaks by properly managing memory using smart pointers or manual <span class="bg-zinc-400/30 rounded-sm px-1">delete</span>.</li>
+                        <li>Prefer modern C++ features (e.g., range-based for loops, smart pointers, etc.) for cleaner and safer code.</li>
+                        <li>Follow SOLID principles in object-oriented design.</li>
+                        <li>Use exception handling (<span class="bg-zinc-400/30 rounded-sm px-1">try-catch</span>) for robust error management.</li>
                     </ul>
                 </div>
             </article>
@@ -1000,10 +1072,7 @@ numbers.push_back(10);
             <header class="sm:text-3xl text-lg font-semibold text-slate-900 dark:text-slate-200">Conclusion</header>
             <article class="text-slate-700 dark:text-slate-400 sm:text-lg text-sm mt-2">
                 <p>
-                    <span class=" dark:text-white text-gray-900">C++ </span> is a powerful and versatile programming
-                    language suitable for a wide range of applications, from system-level programming to game
-                    development. Understanding its syntax, core concepts, and best practices will allow you to harness
-                    its full potential.
+                    C++ is a powerful, flexible, and fast language with applications ranging from system-level programming to high-performance computing. It offers extensive support for both low-level and high-level programming paradigms, making it suitable for a wide variety of development tasks. By mastering C++ and its advanced features such as OOP, templates, and memory management, you can build highly efficient and complex software systems.
                 </p>
             </article>
         </section>
@@ -1056,21 +1125,30 @@ numbers.push_back(10);
                 
             });
         }
-        const darkModeToggle = document.getElementById('darkModeToggle');
-        const html = document.documentElement;
-        darkModeToggle.addEventListener('click', () => {
-            html.classList.toggle('dark');
-            // Optional: simpan preferensi di localStorage
-            if (html.classList.contains('dark')) {
-                localStorage.setItem('theme', 'dark');
-            } else {
-                localStorage.setItem('theme', 'light');
-            }
-        });
+        // const darkModeToggle = document.getElementById('darkModeToggle');
+        // const html = document.documentElement;
+        // darkModeToggle.addEventListener('click', () => {
+        //     html.classList.toggle('dark');
+        //     // Optional: simpan preferensi di localStorage
+        //     if (html.classList.contains('dark')) {
+        //         localStorage.setItem('theme', 'dark');
+        //     } else {
+        //         localStorage.setItem('theme', 'light');
+        //     }
+        // });
 
         // Optional: atur preferensi mode berdasarkan localStorage
-        if (localStorage.getItem('theme') === 'dark') {
-            html.classList.add('dark');
+        // if (localStorage.getItem('theme') === 'dark') {
+        //     html.classList.add('dark');
+        // }
+        // const dropdown = document.querySelectorAll('.dropdown');
+        // document.querySelectorAll('.btn-dropdown').forEach(function(e,index){
+        //     e.addEventListener('click', function (){
+        //         dropdown[index].classList.toggle('hidden')
+        //     });
+        // });
+        function dropDown(element){
+            element.classList.toggle('hidden')
         }
 
     </script>

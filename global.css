@@ -11,17 +11,9 @@ body {
     Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-/* WebKit */
-::-webkit-scrollbar-track {
-  background: #111827;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #888;
-}
-
 /* Firefox */
-* {
-  scrollbar-color: #888 #606265;
-   ;
+*{
+  scrollbar-width: thin;
+  scrollbar-color: #888 transparent;
 }
+
