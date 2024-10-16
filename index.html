@@ -43,23 +43,62 @@
             </div id="header">
 
             <ul class="space-y-2 font-medium my-3 sm:text-sm text-xs">
+                <!-- Introduction -->
                 <li>
                     <a href="#Introduction"
                         class="nav-link flex items-center p-2 text-slate-700 dark:text-slate-400 rounded-lg hover:text-slate-200 hover:bg-gray-100 dark:hover:bg-gray-700 group">
                         <span class="flex-1 whitespace-nowrap">Introduction</span>
                     </a>
                 </li>
-                <li>
+
+                <!-- Installation -->
+                <li class="list">
                     <a href="#Installation"
                         class="nav-link flex items-center p-2 text-slate-700 dark:text-slate-400 rounded-lg hover:text-slate-200 hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                        <span class="flex-1 whitespace-nowrap">Installation</span>
+                      <span class="flex-1 whitespace-nowrap">Installation</span>
+                      <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
+                      </svg>
                     </a>
+                    <ul class="hidden">
+                      <li>
+                        <a href="#Windows" class="nav-link flex items-center p-2 pl-4 text-xs sm:text-xs text-slate-700 dark:text-slate-400 rounded-lg hover:text-slate-200 hover:bg-gray-100 dark:hover:bg-gray-700">Windows</a>
+                      </li>
+                      <li>
+                        <a href="#Linux" class="nav-link flex items-center p-2 pl-4 text-xs sm:text-xs text-slate-700 dark:text-slate-400 rounded-lg hover:text-slate-200 hover:bg-gray-100 dark:hover:bg-gray-700">Linux</a>
+                      </li>
+                      <li>
+                        <a href="#macOS" class="nav-link flex items-center p-2 pl-4 text-xs sm:text-xs text-slate-700 dark:text-slate-400 rounded-lg hover:text-slate-200 hover:bg-gray-100 dark:hover:bg-gray-700">macOS</a>
+                      </li>
+                    </ul>
                 </li>
-                <li>
+                
+                <!-- Syntax Overview -->
+                <li class="list">
                     <a href="#Syntax_Overview"
                         class="nav-link flex items-center p-2 text-slate-700 dark:text-slate-400 rounded-lg hover:text-slate-200 hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                        <span class="flex-1 whitespace-nowrap">Syntax Overview</span>
+                      <span class="flex-1 whitespace-nowrap">Syntax Overview</span>
+                      <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
+                      </svg>
                     </a>
+                    <ul class="hidden">
+                      <li>
+                        <a href="#Basic_Structure_of_a_C++_Program" class="nav-link flex items-center p-2 pl-4 text-xs sm:text-xs text-slate-700 dark:text-slate-400 rounded-lg hover:text-slate-200 hover:bg-gray-100 dark:hover:bg-gray-700">Basic Structure of a C++ Program</a>
+                      </li>
+                      <li>
+                        <a href="#Data_Types" class="nav-link flex items-center p-2 pl-4 text-xs sm:text-xs text-slate-700 dark:text-slate-400 rounded-lg hover:text-slate-200 hover:bg-gray-100 dark:hover:bg-gray-700">Data Types</a>
+                      </li>
+                      <li>
+                        <a href="#Variables_and_Constants" class="nav-link flex items-center p-2 pl-4 text-xs sm:text-xs text-slate-700 dark:text-slate-400 rounded-lg hover:text-slate-200 hover:bg-gray-100 dark:hover:bg-gray-700">Variables and Constants</a>
+                      </li>
+                      <li>
+                        <a href="#Operators" class="nav-link flex items-center p-2 pl-4 text-xs sm:text-xs text-slate-700 dark:text-slate-400 rounded-lg hover:text-slate-200 hover:bg-gray-100 dark:hover:bg-gray-700">Operators</a>
+                      </li>
+                      <li>
+                        <a href="#Control_Flow_Statements" class="nav-link flex items-center p-2 pl-4 text-xs sm:text-xs text-slate-700 dark:text-slate-400 rounded-lg hover:text-slate-200 hover:bg-gray-100 dark:hover:bg-gray-700">Control Flow Statements</a>
+                      </li>
+                    </ul>
                 </li>
                 <li>
                     <a href="#Functions"
@@ -103,34 +142,13 @@
                         <span class="flex-1 whitespace-nowrap">Conclusion</span>
                     </a>
                 </li>
-                <li>
-                    <button type="button" onclick="dropDown(this.nextElementSibling)"
-                            class="flex items-center text-left align-top p-2 w-full text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+                <li class="list">
+                    <a class="flex items-center text-left align-top p-2 w-full text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
                       <span class="flex-1 whitespace-nowrap">Conclusion</span>
                       <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
                       </svg>
-                    </button>
-                    <ul class="hidden py-2 space-y-2">
-                      <li>
-                        <a href="#" class="flex items-center p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Products</a>
-                      </li>
-                      <li>
-                        <a href="#" class="flex items-center p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Billing</a>
-                      </li>
-                      <li>
-                        <a href="#" class="flex items-center p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Invoice</a>
-                      </li>
-                    </ul>
-                </li>
-                <li>
-                    <button type="button" onclick="dropDown(this.nextElementSibling)"
-                            class="flex items-center text-left align-top p-2 w-full text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
-                      <span class="flex-1 whitespace-nowrap">Conclusion</span>
-                      <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
-                      </svg>
-                    </button>
+                    </a>
                     <ul class="hidden py-2 space-y-2">
                       <li>
                         <a href="#" class="flex items-center p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Products</a>
@@ -175,7 +193,7 @@
         <section class="main-section mt-8" id="Installation">
             <header class="sm:text-3xl text-lg font-semibold text-slate-900 dark:text-slate-200">Installation</header>
             <article class="text-slate-700 dark:text-slate-400 sm:text-lg text-sm mt-2">
-                <div class="mt-4">
+                <div class="mt-4" id="Windows">
                     <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">1. Windows</h2>
                     <ol class="list-decimal pl-5 space-y-2">
                         <li>Download and Install a Compiler:
@@ -230,7 +248,7 @@
                         </li>
                     </ol>
                 </div>
-                <div class="mt-4">
+                <div class="mt-4" id="Linux">
                     <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">2. Linux</h2>
                     <ol class="list-decimal pl-5 space-y-2">
                         <li>Open a terminal.</li>
@@ -296,7 +314,7 @@
                         </li>
                     </ol>
                 </div>
-                <div class="mt-4">
+                <div class="mt-4" id="macOS">
                     <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">3. macOS</h2>
                     <ol class="list-decimal pl-5 space-y-2">
                         <li>Install <a class="text-blue-400 hover:underline decoration-1"
@@ -356,7 +374,7 @@
             <header class="sm:text-3xl text-lg font-semibold text-slate-900 dark:text-slate-200">Syntax Overview
             </header>
             <article class="text-slate-700 dark:text-slate-400 sm:text-lg text-sm mt-2">
-                <div class="mt-4">
+                <div class="mt-4" id="Basic_Structure_of_a_C++_Program">
                     <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">1. Basic Structure of a C++ Program</h2>
                     <ul class="list-disc pl-5 space-y-2">
                         <pre><div class="rounded-md flex flex-col dark:ring-1 dark:ring-white/20 dark:ring-offset-0 overflow-hidden mt-1">
@@ -384,7 +402,7 @@ int main() {
                         <li><strong>return 0:</strong> Indicates successful program termination.</li>
                     </ul>
                 </div>
-                <div class="mt-4">
+                <div class="mt-4" id="Data_Types">
                     <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">2. Data Types</h2>
                     <ul class="list-disc pl-5 space-y-2">
                         <li><strong>Primitive Data Types:</strong>
@@ -412,7 +430,7 @@ int main() {
                         </li>
                     </ul>
                 </div>
-                <div class="mt-4">
+                <div class="mt-4" id="Variables_and_Constants">
                     <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">3. Variables and Constants</h2>
                     <div class="ml-3 mt-1">
                         Variables are used to store data in memory, while constants are immutable values that cannot change during program execution.
@@ -431,7 +449,7 @@ const double PI = 3.14; // Constant
                         </div></pre>
                     </div>
                 </div>
-                <div class="mt-4">
+                <div class="mt-4" id="Operators">
                     <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">4. Operators</h2>
                     <div class="ml-3 mt-1">
                         <p>Operators are used to perform operations on variables and values. C++ supports several types of operators:</p>
@@ -467,7 +485,7 @@ const double PI = 3.14; // Constant
                         </ul>
                     </div>
                 </div>
-                <div class="mt-4">
+                <div class="mt-4" id="Control_Flow_Statements">
                     <h2 class="text-sm sm:text-lg dark:text-white text-gray-900">5. Control Flow Statements</h2>
                     <ol class="list-decimal pl-5 space-y-2">
                         <li>Conditional Statements
@@ -1147,9 +1165,24 @@ int main() {
         //         dropdown[index].classList.toggle('hidden')
         //     });
         // });
-        function dropDown(element){
-            element.classList.toggle('hidden')
-        }
+
+        const list = document.querySelectorAll('.list');
+        list.forEach(function(e, index) {
+            const dropDown = list[index].children[1];
+            let timeout; // Variabel untuk menyimpan timeout
+    
+            e.addEventListener('mouseenter', function() {
+                timeout = setTimeout(() => {
+                    dropDown.classList.remove('hidden'); // Menampilkan dropdown dengan delay
+                }, 100); // Delay 100ms
+            });
+    
+            e.addEventListener('mouseleave', function() {
+                clearTimeout(timeout); // Hentikan timeout jika mouse keluar sebelum delay selesai
+                 dropDown.classList.add('hidden'); // Menyembunyikan dropdown
+            });
+        });
+
 
     </script>
 
